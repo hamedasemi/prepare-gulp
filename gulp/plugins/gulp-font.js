@@ -20,7 +20,7 @@ function gulpPrefixer(options) {
         // this.emit('error', new PluginError(PLUGIN_NAME, 'Buffers not supported!'));
         // return cb();
 
-        console.log(file.base)
+        let fileName = file.basename.replace(file.extname, '')
 
         // make sure the file goes through the next gulp plugin
         this.push(file);
@@ -31,19 +31,19 @@ function gulpPrefixer(options) {
         this.push(new gutil.File({
             cwd: "",
             base: "",
-            path: 'hello.woff',
+            path: `${fileName}.woff`,
             contents: new Buffer(ttf2woff(file.contents))
         }));
         this.push(new gutil.File({
             cwd: "",
             base: "",
-            path: 'hello.eot',
+            path: `${fileName}.eot`,
             contents: new Buffer(ttf2eot(file.contents))
         }));
         this.push(new gutil.File({
             cwd: "",
             base: "",
-            path: 'hello.css',
+            path: `${fileName}.css`,
             contents: new Buffer(`@font-face {
                 font-family: "${'name'}";
                 weight: "${'weight'}";
