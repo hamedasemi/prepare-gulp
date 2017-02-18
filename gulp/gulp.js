@@ -3,7 +3,7 @@ import { series, parallel } from 'gulp'
 import { clean } from './tasks/clean'
 import { sync } from './tasks/sync'
 import { localesList } from './tasks/locales'
-import { font } from './tasks/font'
+import { fonts } from './tasks/fonts'
 import { internationalise } from './tasks/internationalise'
 import {
     polymerStyleTranspile, polymerStyleTranspileWatch,
@@ -16,7 +16,7 @@ import {
 
 export { sync }
 export { localesList }
-export { font }
+export { fonts }
 export { internationalise }
 
 export const angular = parallel(
