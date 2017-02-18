@@ -1,10 +1,10 @@
-import {series, parallel} from 'gulp'
+import { series, parallel } from 'gulp'
 
-import {clean} from './tasks/clean'
-import {sync} from './tasks/sync'
-import {localesList} from './tasks/locales'
-import {font} from './tasks/font'
-import {internationalise} from './tasks/internationalise'
+import { clean } from './tasks/clean'
+import { sync } from './tasks/sync'
+import { localesList } from './tasks/locales'
+import { font } from './tasks/font'
+import { internationalise } from './tasks/internationalise'
 import {
     polymerStyleTranspile, polymerStyleTranspileWatch,
     polymerMarkupTranspile, polymerMarkupTranspileWatch,
@@ -14,10 +14,10 @@ import {
     angularScriptTranspile, angularScriptTranspileWatch
 } from './tasks/transpile'
 
-export {sync}
-export {localesList}
-export {font}
-export {internationalise}
+export { sync }
+export { localesList }
+export { font }
+export { internationalise }
 
 export const angular = parallel(
     series(angularMarkupTranspile, angularMarkupTranspileWatch),
