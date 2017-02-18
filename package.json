@@ -39,6 +39,7 @@
     "gulp": "github:gulpjs/gulp#4.0",
     "gulp-babel": "^6.1.2",
     "gulp-cli": "^1.2.1",
+    "gulp-filter": "^5.0.0",
     "gulp-font": "^1.0.3",
     "gulp-newer": "^1.1.0",
     "gulp-polymer-babel": "^1.0.1",
