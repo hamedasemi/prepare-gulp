@@ -10,7 +10,9 @@ export function fonts(done) {
     obj([
         src(`${config.src}/assets/fonts/**/*.ttf`),
         // newer(config.dest),
-        font(),
+        font({
+            embed: true
+        }),
         dest(config.dest)
 
     ]).on(`error`, console.error.bind(console));
